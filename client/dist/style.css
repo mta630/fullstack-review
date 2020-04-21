@@ -1,0 +1,29 @@
+.search-container {
+  float: right;
+}
+
+.title-container {
+  width: 60%;
+  font-size: 25px;
+}
+
+.repolist-container {
+  border: .5px solid grey;
+  padding: 10px 10px;
+  margin: 10px;
+}
+
+.repo-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.display-key {
+  font-weight: 600;
+}
+
+.body-container {
+  width: 500px;
+  margin: auto;
+  text-align: center;
+}

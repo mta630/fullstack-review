@@ -3,27 +3,28 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import Search from './components/Search.jsx';
 import RepoList from './components/RepoList.jsx';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from 'react-bootstrap/Navbar';
+import Container from "react-bootstrap/Container";
+var Promise = require('bluebird');
+
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { 
-      repos: []
+    this.state = {
     }
 
   }
 
-  search (term) {
-    console.log(`${term} was searched`);
-    // TODO
-  }
+
 
   render () {
-    return (<div>
-      <h1>Github Fetcher</h1>
-      <RepoList repos={this.state.repos}/>
-      <Search onSearch={this.search.bind(this)}/>
-    </div>)
+    return (
+    <Container>
+
+    </Container>
+    )
   }
 }
 

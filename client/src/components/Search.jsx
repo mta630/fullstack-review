@@ -1,4 +1,7 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import FormControl from 'react-bootstrap/FormControl';
 
 class Search extends React.Component {
   constructor(props) {
@@ -6,6 +9,9 @@ class Search extends React.Component {
     this.state = {
       term: ''
     }
+
+    this.search = this.search.bind(this);
+    this.onChange = this.onChange.bind(this);
   }
 
   onChange (e) {
@@ -19,11 +25,14 @@ class Search extends React.Component {
   }
 
   render() {
-    return (<div>
-      <h4>Add more repos!</h4>
-      Enter a github username: <input value={this.state.terms} onChange={this.onChange}/>       
-      <button onClick={this.search}> Add Repos </button>
-    </div>) 
+    return (
+    <div className="search-container">
+      <Form inline>
+        <FormControl type="text" placeholder="Enter a github handle" className="mr-sm-2" value={this.state.terms} onChange={this.onChange}/>
+        <Button variant="outline-info" onClick={this.search}>Add Repos</Button>
+      </Form>
+    </div>
+    )
   }
 }
 
